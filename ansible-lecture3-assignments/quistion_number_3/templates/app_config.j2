@@ -1,0 +1,10 @@
+app_name = {{ app_name }}
+app_version = {{ app_version }}
+env = {{ env }}
+database_host = {{ database_host }}
+database_port = {{ database_port }}
+database_username = {{ database_username }}
+{% if env == "dev" %}
+[debug]
+debug = true
+{% endif %}

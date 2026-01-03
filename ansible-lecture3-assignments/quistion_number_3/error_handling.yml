@@ -1,0 +1,19 @@
+- name: Deploy application configuration
+  hosts: all
+  become: false
+
+  vars:
+    app_name: my_app
+    app_version: "1.0.0"
+    env: dev   # dev | staging | prod
+
+    database_host: localhost
+    database_port: 5432
+    database_username: app_user
+
+  tasks:
+    - name: Generate application config file
+      template:
+        src: app_config.j2
+        dest: /tmp/app_config.ini
+        mode: '0644'
