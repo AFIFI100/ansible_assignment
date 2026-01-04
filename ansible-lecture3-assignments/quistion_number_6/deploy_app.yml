@@ -1,0 +1,14 @@
+---
+- name: Environment-Specific Variables
+  hosts: web_server 
+  gather_facts: false
+  vars_files:
+    - "vars/vars_{{ env }}.yml"
+  tasks:
+    - name: Deploy application with environment-specific settings
+      debug:
+        msg: |
+          Deploying application with the following settings:
+          - "App Port: {{ app_port }}"
+          - "DB Host: {{ db_host }}"
+          - "Log Level: {{ log_level }}"
