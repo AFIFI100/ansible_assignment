@@ -1,0 +1,12 @@
+users:
+  - name: ahmed
+    email: ahmed@test.com
+    role: admin
+
+  - name: sara
+    email: sara@test.com
+    role: developer
+
+  - name: khaled
+    email: khaled@test.com
+    role: viewer

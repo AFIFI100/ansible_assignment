@@ -1,0 +1,11 @@
+---
+- name: Looping in Jinja2 Templates
+  hosts: web_server
+  gather_facts: false
+  vars_files:
+    - vars/users.yaml
+  tasks:
+    - name: Create user configuration file from template
+      template:
+        src: users.conf.j2
+        dest: /tmp/users.conf
