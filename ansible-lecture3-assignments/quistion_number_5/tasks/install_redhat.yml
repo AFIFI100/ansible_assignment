@@ -1,0 +1,7 @@
+- name: install redhat packages
+  yum:
+    name: 
+      - git
+      - curl
+      - vim
+    update_cache: yes 

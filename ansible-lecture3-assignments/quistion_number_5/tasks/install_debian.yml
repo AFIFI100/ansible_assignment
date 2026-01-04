@@ -1,0 +1,7 @@
+- name: install packages on debian
+  apt:
+    name: 
+      - git
+      - curl
+      - vim
+    update_cache: yes
