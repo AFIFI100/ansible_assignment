@@ -1,0 +1,6 @@
+---
+- name: Deploy and configure web server
+  hosts: web_server
+  become: yes
+  roles:
+    - webserver_setup

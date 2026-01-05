@@ -1,0 +1,13 @@
+- name: install nginx
+  yum:
+    name: nginx
+    state: present
+- name: Copies a custom HTML file
+  copy:
+    src: index.html
+    dest: /usr/share/nginx/html/index.html
+- name: Uses a template to create a basic nginx configuration
+  template:
+    src: nginx.cong.j2
+    dest: "{{ nginx_root}}"
+  notify: Restart nginx

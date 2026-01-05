@@ -1,0 +1,9 @@
+server {
+    listen {{ web_port }};
+    server_name 192.168.108.133;
+
+    location / {
+        root /usr/share/nginx/html;
+        index index.html;
+    }
+}
